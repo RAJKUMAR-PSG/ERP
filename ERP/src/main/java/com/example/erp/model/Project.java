@@ -2,7 +2,7 @@ package com.example.erp.model;
 
 import jakarta.persistence.*;
 
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "projects")
@@ -14,5 +14,5 @@ public class Project {
     private String name;
 
     @ManyToMany(mappedBy = "projects")
-    private Set<Employee> employees;
+    private List<Employee> employees;
 }
